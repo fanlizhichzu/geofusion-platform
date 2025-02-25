@@ -4,34 +4,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.glidegeo.latform</groupId>
-    <artifactId>glidegeo-component-platform</artifactId>
+    <groupId>io.github.fanlzhichzu</groupId>
+    <artifactId>geofusion-component-platform</artifactId>
     <packaging>pom</packaging>
-    <version>2.2.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
-        <logback.version>1.2.9</logback.version>
-        <springfox-swagger.version>2.8.0</springfox-swagger.version>
-        <mybatis-plus.version>3.4.3</mybatis-plus.version>
-        <dynamic-datasource.version>3.4.0</dynamic-datasource.version>
-        <flyway.version>5.2.4</flyway.version>
-        <postgresql.version>42.4.1</postgresql.version>
-        <lombook.version>1.18.12</lombook.version>
-        <fastjson.version>1.2.83</fastjson.version>
-        <commons-codec.version>1.9</commons-codec.version>
-        <commons-io.version>2.6</commons-io.version>
-        <commons-lang3.version>3.3.2</commons-lang3.version>
-        <log4j.version>2.17.2</log4j.version>
-        <tomcat.version>9.0.63</tomcat.version>
+        <spring-boot.version>3.3.5</spring-boot.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2023.0.1.0</spring-cloud-alibaba.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
 
+    <!-- 关键依赖管理 -->
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot基础版本 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -39,6 +29,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Spring Cloud版本 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -46,6 +38,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Spring Cloud Alibaba版本 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -54,50 +48,36 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 公共依赖版本锁定 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-        <!--logback 注解-->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <!--lombok 注解-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombook.version}</version>
-            <optional>true</optional>
-            <scope>provided</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>${commons-codec.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-
-        <!--fastjosn-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-    </dependencies>
+    <!-- 如果要上传自己的包，可以用github的仓库 -->
+    <distributionManagement>
+        <repository>
+            <!-- id需要与上面的server对应的id匹配 -->
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/fanlizhichzu/geofusion-platform</url>
+        </repository>
+    </distributionManagement>
 
 </project>
