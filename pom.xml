@@ -10,12 +10,23 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <spring-boot.version>3.3.5</spring-boot.version>
-        <spring-cloud.version>2023.0.1</spring-cloud.version>
-        <spring-cloud-alibaba.version>2023.0.1.0</spring-cloud-alibaba.version>
-        <lombok.version>1.18.30</lombok.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <spring-boot.version>3.4.4</spring-boot.version>
+        <spring-cloud.version>2024.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2023.0.1.3</spring-cloud-alibaba.version>
+
+        <dynamic-datasource.version>3.4.0</dynamic-datasource.version>
+        <postgresql.version>42.7.2</postgresql.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <flyway.version>9.22.3</flyway.version>
+
+        <jasypt-version>3.0.5</jasypt-version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <lombook.version>1.18.34</lombook.version>
+        <logback.version>1.4.12</logback.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
     <!-- 关键依赖管理 -->
