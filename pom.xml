@@ -31,6 +31,8 @@
         <logback.version>1.4.12</logback.version>
         <commons-io.version>2.6</commons-io.version>
         <commons-lang3.version>3.9</commons-lang3.version>
+        <commons-codec.version>1.9</commons-codec.version>
+        <bouncycastle-version>1.58</bouncycastle-version>
     </properties>
 
     <!-- 关键依赖管理 -->
