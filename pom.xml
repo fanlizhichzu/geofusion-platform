@@ -8,7 +8,7 @@
     <artifactId>geofusion-component-platform</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>common</module>
+        <module>geofusion-common-platform</module>
     </modules>
     <version>1.0.0-SNAPSHOT</version>
 
