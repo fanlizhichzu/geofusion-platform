@@ -1,0 +1,9 @@
+mybatis-plus:
+  configuration:
+    #开启驼峰明明转换
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mybatis/mapper/**.xml
+  global-config:
+    banner: false

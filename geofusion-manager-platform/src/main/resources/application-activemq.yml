@@ -1,0 +1,11 @@
+# ActiveMQ 配置
+spring:
+  activemq:
+    broker-url: tcp://117.72.46.51
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+      max-connections: 50
+    packages:
+      trust-all: true

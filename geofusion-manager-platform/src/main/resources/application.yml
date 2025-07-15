@@ -1,0 +1,24 @@
+server:
+  port: 12089
+spring:
+  application:
+    name: manager
+  config:
+    import:
+      - optional:classpath:application-flyway.yml
+      - optional:classpath:application-redis.yml
+      - optional:classpath:application-mybatisplus.yml
+      - optional:classpath:application-activemq.yml
+  mvc:
+    servlet:
+      path: /manager
+    hiddenmethod:
+      filter:
+        enabled: true
+    static-path-pattern: /**
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  jackson:
+    default-property-inclusion: non_null
