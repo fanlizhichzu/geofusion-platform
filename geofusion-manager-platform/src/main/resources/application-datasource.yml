@@ -11,5 +11,5 @@ spring:
       idle-timeout: 30000
       #池中连接的最长生命周期，值 0 表示无限生命周期（毫秒）
       max-lifetime: 1800000
-      max-pool-size: 50
-      min-idle: 10
+      minimum-idle: 10
+      maximum-pool-size: 50
