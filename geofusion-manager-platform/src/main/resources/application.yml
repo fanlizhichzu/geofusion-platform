@@ -9,6 +9,7 @@ spring:
       - optional:classpath:application-redis.yml
       - optional:classpath:application-mybatisplus.yml
       - optional:classpath:application-activemq.yml
+      - optional:classpath:application-datasource.yml
   mvc:
     servlet:
       path: /manager
