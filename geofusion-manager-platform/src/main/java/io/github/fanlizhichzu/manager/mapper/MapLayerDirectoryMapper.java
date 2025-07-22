@@ -1,6 +1,6 @@
 package io.github.fanlizhichzu.manager.mapper;
 
-import io.github.fanlizhichzu.manager.domain.MapLayerDirectory;
+import io.github.fanlizhichzu.manager.domain.entity.MapLayerDirectory;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

@@ -1,4 +1,4 @@
-package io.github.fanlizhichzu.manager.domain;
+package io.github.fanlizhichzu.manager.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,25 +26,25 @@ public class MapLayerDirectory implements Serializable {
      * 
      */
     @TableField(value = "directory_name")
-    private String directory_name;
+    private String directoryName;
 
     /**
      * 
      */
     @TableField(value = "directory_title")
-    private String directory_title;
+    private String directoryTitle;
 
     /**
      * 
      */
     @TableField(value = "directory_order")
-    private Integer directory_order;
+    private Integer directoryOrder;
 
     /**
      * 
      */
     @TableField(value = "directory_parent")
-    private String directory_parent;
+    private String directoryParent;
 
     @Serial
     @TableField(exist = false)
@@ -63,10 +63,10 @@ public class MapLayerDirectory implements Serializable {
         }
         MapLayerDirectory other = (MapLayerDirectory) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getDirectory_name() == null ? other.getDirectory_name() == null : this.getDirectory_name().equals(other.getDirectory_name()))
-            && (this.getDirectory_title() == null ? other.getDirectory_title() == null : this.getDirectory_title().equals(other.getDirectory_title()))
-            && (this.getDirectory_order() == null ? other.getDirectory_order() == null : this.getDirectory_order().equals(other.getDirectory_order()))
-            && (this.getDirectory_parent() == null ? other.getDirectory_parent() == null : this.getDirectory_parent().equals(other.getDirectory_parent()));
+            && (this.getDirectoryName() == null ? other.getDirectoryName() == null : this.getDirectoryName().equals(other.getDirectoryName()))
+            && (this.getDirectoryTitle() == null ? other.getDirectoryTitle() == null : this.getDirectoryTitle().equals(other.getDirectoryTitle()))
+            && (this.getDirectoryOrder() == null ? other.getDirectoryOrder() == null : this.getDirectoryOrder().equals(other.getDirectoryOrder()))
+            && (this.getDirectoryParent() == null ? other.getDirectoryParent() == null : this.getDirectoryParent().equals(other.getDirectoryParent()));
     }
 
     @Override
@@ -74,10 +74,10 @@ public class MapLayerDirectory implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getDirectory_name() == null) ? 0 : getDirectory_name().hashCode());
-        result = prime * result + ((getDirectory_title() == null) ? 0 : getDirectory_title().hashCode());
-        result = prime * result + ((getDirectory_order() == null) ? 0 : getDirectory_order().hashCode());
-        result = prime * result + ((getDirectory_parent() == null) ? 0 : getDirectory_parent().hashCode());
+        result = prime * result + ((getDirectoryName() == null) ? 0 : getDirectoryName().hashCode());
+        result = prime * result + ((getDirectoryTitle() == null) ? 0 : getDirectoryTitle().hashCode());
+        result = prime * result + ((getDirectoryOrder() == null) ? 0 : getDirectoryOrder().hashCode());
+        result = prime * result + ((getDirectoryParent() == null) ? 0 : getDirectoryParent().hashCode());
         return result;
     }
 
@@ -88,10 +88,10 @@ public class MapLayerDirectory implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", directory_name=").append(directory_name);
-        sb.append(", directory_title=").append(directory_title);
-        sb.append(", directory_order=").append(directory_order);
-        sb.append(", directory_parent=").append(directory_parent);
+        sb.append(", directoryName=").append(directoryName);
+        sb.append(", directoryTitle=").append(directoryTitle);
+        sb.append(", directoryOrder=").append(directoryOrder);
+        sb.append(", directoryParent=").append(directoryParent);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

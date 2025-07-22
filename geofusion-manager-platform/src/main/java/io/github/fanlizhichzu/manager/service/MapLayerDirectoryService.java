@@ -1,7 +1,10 @@
 package io.github.fanlizhichzu.manager.service;
 
-import io.github.fanlizhichzu.manager.domain.MapLayerDirectory;
+import io.github.fanlizhichzu.manager.domain.entity.MapLayerDirectory;
 import com.baomidou.mybatisplus.extension.service.IService;
+import io.github.fanlizhichzu.manager.domain.vo.MapLayerDirectoryVO;
+
+import java.util.List;
 
 /**
 * @author lizhifan
@@ -11,4 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface MapLayerDirectoryService extends IService<MapLayerDirectory> {
 
     MapLayerDirectory add(MapLayerDirectory mapLayerDirectory);
+
+    List<MapLayerDirectoryVO> getList();
 }
