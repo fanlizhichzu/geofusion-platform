@@ -16,4 +16,6 @@ public interface MapLayerDirectoryService extends IService<MapLayerDirectory> {
     MapLayerDirectory add(MapLayerDirectory mapLayerDirectory);
 
     List<MapLayerDirectoryVO> getList();
+
+    MapLayerDirectory modify(MapLayerDirectory mapLayerDirectory);
 }

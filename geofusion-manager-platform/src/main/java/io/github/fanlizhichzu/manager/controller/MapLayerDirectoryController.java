@@ -27,4 +27,15 @@ public class MapLayerDirectoryController {
     public RestResponse<List<MapLayerDirectoryVO>> list() {
         return RestResponse.success(mapLayerDirectoryService.getList());
     }
+
+    @PostMapping("/modify")
+    public RestResponse<MapLayerDirectory> modify(@RequestBody MapLayerDirectory mapLayerDirectory) {
+        return RestResponse.success(mapLayerDirectoryService.modify(mapLayerDirectory));
+    }
+
+    @DeleteMapping("/delete")
+    public RestResponse<Boolean> delete(@RequestParam("id") String id) {
+        return RestResponse.success(mapLayerDirectoryService.removeById(id));
+    }
+
 }

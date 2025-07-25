@@ -1,0 +1,32 @@
+###
+GET {{manager}}/mapLayerDirectory/list
+
+###
+POST {{manager}}/mapLayerDirectory/add
+Content-Type: application/json
+
+{
+  "id": "",
+  "directoryName": "",
+  "directoryTitle": "",
+  "directoryOrder": 0,
+  "directoryParent": ""
+}
+
+
+###
+POST {{manager}}/mapLayer/add
+Content-Type: application/json
+
+{
+  "layerName": "geoserverWms",
+  "layerTitle": "第一个测试图层",
+  "layerOrder": 1,
+  "layerParent": "0a853e732354a578b5c7283ea4e42b54",
+  "layerConfig": {
+    "type": "wms",
+    "url": "http://117.72.46.51:8000/geoserver/ne/wms",
+    "name": "ne:countries"
+  },
+  "layerZindex": 0
+}

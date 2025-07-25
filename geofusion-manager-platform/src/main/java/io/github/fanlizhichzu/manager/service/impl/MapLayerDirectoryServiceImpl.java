@@ -44,6 +44,12 @@ public class MapLayerDirectoryServiceImpl extends ServiceImpl<MapLayerDirectoryM
                         .build()
         ).toList();
     }
+
+    @Override
+    public MapLayerDirectory modify(MapLayerDirectory mapLayerDirectory) {
+        mapLayerDirectoryMapper.updateById(mapLayerDirectory);
+        return mapLayerDirectory;
+    }
 }
 
 

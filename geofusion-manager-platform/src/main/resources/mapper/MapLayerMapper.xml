@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.fanlizhichzu.manager.mapper.MapLayerMapper">
+
+    <resultMap id="BaseResultMap" type="io.github.fanlizhichzu.manager.domain.entity.MapLayer">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="layerName" column="layer_name" jdbcType="VARCHAR"/>
+            <result property="layerTitle" column="layer_title" jdbcType="VARCHAR"/>
+            <result property="layerOrder" column="layer_order" jdbcType="SMALLINT"/>
+            <result property="layerParent" column="layer_parent" jdbcType="VARCHAR"/>
+            <result property="layerConfig" column="layer_config" jdbcType="OTHER"/>
+            <result property="layerZindex" column="layer_zindex" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,layer_name,layer_title,
+        layer_order,layer_parent,layer_config,
+        layer_zindex
+    </sql>
+</mapper>
